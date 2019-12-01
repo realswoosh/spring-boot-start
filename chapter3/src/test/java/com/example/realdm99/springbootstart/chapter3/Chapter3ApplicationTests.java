@@ -88,4 +88,10 @@ class Chapter3ApplicationTests {
 
         results.getContent().forEach(board -> System.out.println(board));
     }
+
+    @Test
+    public void testByTitle2() {
+        repo.findByTitle("17")
+                .forEach(board -> System.out.println(board));
+    }
 }
