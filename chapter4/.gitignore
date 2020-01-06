@@ -20,8 +20,6 @@ build/
 *.iml
 *.ipr
 out/
-src/main/generated
-chapter3-querydsl/src/main/generated
 
 ### NetBeans ###
 /nbproject/private/
