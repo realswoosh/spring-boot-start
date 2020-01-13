@@ -70,4 +70,8 @@ public class SampleController {
         String result = "SUCCESS";
         model.addAttribute("result", result);
     }
+
+    @GetMapping("/sample8")
+    public void sample8() {
+    }
 }
