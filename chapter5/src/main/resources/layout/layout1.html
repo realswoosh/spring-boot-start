@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!-- content body -->
+<div layout:fragment="content">
+  div
+</div>
+<script src="https://code.jquery.com/jquery-1.12.min.js"></script>
+--중간 생략--
+<script src="js/main.js"></script>
+<!-- custom javascript -->
+<th:block layout:fragment="script"></th:block>
+</body>
+</html>

@@ -74,4 +74,9 @@ public class SampleController {
     @GetMapping("/sample8")
     public void sample8() {
     }
+
+    @GetMapping("/sample/hello")
+    public void hello() {
+
+    }
 }
