@@ -5,6 +5,9 @@ import java.util.stream.IntStream;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.test.annotation.Commit;
 
 import com.example.realdm99.chapter6.domain.WebBoard;
@@ -27,5 +30,31 @@ public class WebBoardRepositoryTests {
 
             webBoardRepository.save(board);
         });
+    }
+
+    @Test
+    public void testList1() {
+        PageRequest pageable = PageRequest.of(0, 20, Direction.DESC, "bno");
+
+        Page<WebBoard> result = webBoardRepository.findAll(webBoardRepository.makePredicate(null, null),
+                                                           pageable);
+
+        System.out.println("PAGE: " + result.getPageable());
+        System.out.println("-------------------");
+
+        result.getContent().forEach(board -> System.out.println("" + board));
+    }
+
+    @Test
+    public void testList2() {
+        PageRequest pageRequest = PageRequest.of(0, 20, Direction.DESC, "bno");
+
+        Page<WebBoard> result = webBoardRepository.findAll(
+                webBoardRepository.makePredicate("t", "10"), pageRequest);
+
+        System.out.println("PAGE: " + result.getPageable());
+
+        System.out.println("------------------------");
+        result.getContent().forEach(board -> System.out.println("" + board));
     }
 }

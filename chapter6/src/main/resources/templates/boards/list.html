@@ -1,10 +1,16 @@
 <html
-  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.w3.org/1999/xhtml"
   layout:decorate="~{/layout/layout1}">
 
 <div layout:fragment="content">
   <div class="panel-heading">List Page</div>
-  <div class="panel-body pull-right">
+  <div class="panel-body">
+    <p>[[${result}]]</p>
+    <div>
+      <ul class="list-group">
+        <li class="list-group-item" th:each="board:${result.content}">[[${board}]]</li>
+      </ul>
+    </div>
   </div>
 </div>
 </html>
