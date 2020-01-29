@@ -10,6 +10,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.test.annotation.Commit;
 
+import com.example.realdm99.chapter6.EnumTest.PriceTaxClassify;
 import com.example.realdm99.chapter6.domain.WebBoard;
 import com.example.realdm99.chapter6.persistence.WebBoardRepository;
 
@@ -56,5 +57,13 @@ public class WebBoardRepositoryTests {
 
         System.out.println("------------------------");
         result.getContent().forEach(board -> System.out.println("" + board));
+    }
+
+    @Test
+    public void testEnum() {
+        EnumTest enumTest = new EnumTest();
+        enumTest.setPriceTaxClassify(PriceTaxClassify.TAX_EXCLUDE);
+
+        System.out.println(enumTest.getPriceTaxClassify());
     }
 }
