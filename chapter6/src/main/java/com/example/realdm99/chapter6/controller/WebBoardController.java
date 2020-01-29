@@ -10,6 +10,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.realdm99.chapter6.domain.WebBoard;
@@ -36,10 +37,11 @@ public class WebBoardController {
     private WebBoardRepository webBoardRepository;
 
     @GetMapping("/list")
-    public void list(PageVO vo, Model model) {
+    public void list(@ModelAttribute("pageVO") PageVO vo, Model model) {
         final Pageable page = vo.makePageable(0, "bno");
 
-        final Page<WebBoard> result = webBoardRepository.findAll(webBoardRepository.makePredicate(null, null), page);
+        final Page<WebBoard> result = webBoardRepository.findAll(
+                webBoardRepository.makePredicate(vo.getType(), vo.getKeyword()), page);
 
         log.info("" + page);
         log.info("" + result);
