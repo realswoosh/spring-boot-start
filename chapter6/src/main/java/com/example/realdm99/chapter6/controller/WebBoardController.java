@@ -57,6 +57,12 @@ public class WebBoardController {
 
         webBoardRepository.findById(bno).ifPresent(board -> model.addAttribute("vo", board));
     }
+
+    @GetMapping("/modify")
+    public void modify(Long bno, @ModelAttribute("pageVO") PageVO vo, Model model) {
+        log.info("MODIFY BNO: " + bno);
+        webBoardRepository.findById(bno).ifPresent(board -> model.addAttribute("vo", board));
+    }
     @GetMapping("/register")
     public void registerGET(@ModelAttribute("vo") WebBoard vo) {
         log.info("register get");
