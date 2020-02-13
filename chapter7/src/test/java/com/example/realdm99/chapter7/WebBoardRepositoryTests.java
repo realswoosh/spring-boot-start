@@ -10,9 +10,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.test.annotation.Commit;
 
-import com.example.realdm99.chapter6.EnumTest.PriceTaxClassify;
-import com.example.realdm99.chapter6.domain.WebBoard;
-import com.example.realdm99.chapter6.persistence.WebBoardRepository;
+import com.example.realdm99.chapter7.EnumTest;
+import com.example.realdm99.chapter7.EnumTest.PriceTaxClassify;
+import com.example.realdm99.chapter7.domain.WebBoard;
+import com.example.realdm99.chapter7.persistence.WebBoardRepository;
 
 @SpringBootTest
 @Commit

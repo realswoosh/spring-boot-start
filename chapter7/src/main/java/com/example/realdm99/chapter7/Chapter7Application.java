@@ -1,4 +1,4 @@
-package com.example.realdm99.chapter6;
+package com.example.realdm99.chapter7;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
