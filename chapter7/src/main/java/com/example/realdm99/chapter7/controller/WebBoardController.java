@@ -106,4 +106,5 @@ public class WebBoardController {
 
         return "redirect:/boards/view";
     }
+
 }
