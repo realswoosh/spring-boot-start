@@ -1,4 +1,4 @@
-package com.example.realdm99.chapter6;
+package com.example.realdm99.chapter7;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

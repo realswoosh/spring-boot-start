@@ -1,4 +1,4 @@
-package com.example.realdm99.chapter6.vo;
+package com.example.realdm99.chapter7.vo;
 
 import java.util.ArrayList;
 import java.util.List;

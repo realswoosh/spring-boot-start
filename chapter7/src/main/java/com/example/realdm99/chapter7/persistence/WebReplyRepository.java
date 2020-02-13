@@ -1,4 +1,9 @@
 package com.example.realdm99.chapter7.persistence;
 
-public class WebReplyRepository {
+import org.springframework.data.repository.CrudRepository;
+
+import com.example.realdm99.chapter7.domain.WebReply;
+
+public interface WebReplyRepository extends CrudRepository<WebReply, Long> {
+
 }

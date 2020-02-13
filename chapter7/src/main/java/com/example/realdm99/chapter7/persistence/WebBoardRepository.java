@@ -1,10 +1,10 @@
-package com.example.realdm99.chapter6.persistence;
+package com.example.realdm99.chapter7.persistence;
 
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.repository.CrudRepository;
 
-import com.example.realdm99.chapter6.domain.QWebBoard;
-import com.example.realdm99.chapter6.domain.WebBoard;
+import com.example.realdm99.chapter7.domain.QWebBoard;
+import com.example.realdm99.chapter7.domain.WebBoard;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Predicate;
 
